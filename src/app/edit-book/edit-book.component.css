@@ -36,11 +36,11 @@
     padding: 5px;
     border: solid 2px #000;
     border-radius: 10px;
-    height: 400px;
+    height: auto;
 }
 
 #content-input{
-    height: 250px;
+    height: 200px;
     width: 500px;
 }
 
@@ -58,4 +58,25 @@
 h2{
     font-size: 24px;
     border-bottom: solid 2px #A9A9A9;
+}
+
+.file-input-button{
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    color: #333;
+    width: 326px;    
+}
+
+#file-input{
+    display: none;
+}
+
+.content-input-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
 }

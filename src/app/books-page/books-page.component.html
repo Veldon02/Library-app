@@ -1,1 +1,29 @@
-<p>books-page works!</p>
+<div class="book-page">
+    <h1>Details</h1>
+    <div class="container">
+        <div class="image-section">
+            <img src={{book.cover}}>
+            <div class="statistics">
+                <p>Rating: {{book.averageRating.toFixed(1)}}</p>
+                <p>Reviews: {{book.reviews.length}}</p>
+            </div>
+        </div>
+        <div class="text-section">
+            <h2>{{book.title}}</h2>
+            <p>{{book.author}}, {{book.genre}}</p>
+            <div>
+                <p>
+                    {{book.content}}
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div *ngFor="let review of book.reviews" class="reviews">
+            <div>
+                <h3>{{review.reviewer}}</h3>
+                <p>{{review.message}}</p>
+            </div>
+        </div>
+    </div>
+</div>

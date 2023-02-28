@@ -13,8 +13,14 @@
 img{
     width: 190px;
     height: 190px;
+    object-fit: cover;
+    object-position: 0 0;
 }
 
 button{
     margin: 0 5px;
+}
+
+.info{
+    width: 250px;
 }

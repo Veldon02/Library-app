@@ -1,6 +1,6 @@
 <section class="book-list">
     <mat-tab-group class="tabs">
-        <mat-tab label="All" class="tab">
+        <mat-tab label="All" class="tab" (click)="onTabAll()">
             <div class="books">
                 <div class="wrapper">
                     <div class="book-item" *ngFor="let book of books">
@@ -9,10 +9,10 @@
                 </div>
             </div> 
         </mat-tab>
-        <mat-tab label="Recommended" class="tab">
+        <mat-tab label="Recommended" class="tab" (click)="onTabRecommended()">
             <div class="book-tab">
                 <div class="wrapper">
-                    <div class="book-item" *ngFor="let book of books">
+                    <div class="book-item" *ngFor="let book of recommendedBooks">
                         <app-book-list-item [book] = "book"></app-book-list-item>
                     </div>
                 </div>

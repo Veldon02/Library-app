@@ -10,12 +10,32 @@ import { ApiserviceService } from '../apiservice.service';
   styleUrls: ['./book-list.component.css']
 })
 export class BookListComponent {
-  books!: Book[];
+  books:any = [];
+  recommendedBooks:any = [];
 
   constructor(private _apiservice: ApiserviceService) {}
 
-  onInit() {
+  ngOnInit():void {
     this._apiservice.getBooks()
+      .subscribe(
+        books => this.books = books
+      );
+
+      this._apiservice.getRecommendedBooks()
+      .subscribe(
+        books => this.recommendedBooks = books
+      );
+  }
+
+  onTabAll(){
+    this._apiservice.getBooks()
+      .subscribe(
+        books => this.books = books
+      );
+  }
+
+  onTabRecommended(){
+    this._apiservice.getRecommendedBooks()
       .subscribe(
         books => this.books = books
       );

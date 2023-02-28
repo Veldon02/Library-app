@@ -1,0 +1,47 @@
+.book-page{
+    width: 1000px;
+    height: 700px;
+    padding: 10px 25px;
+}
+
+h1{
+    text-align: center;
+    border-bottom: solid 2px #a9a9a9;
+}
+
+.statistics > p{
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.image-section{
+    width: 350px;
+    text-align: center;
+}
+
+img{
+    width: 330px;
+    height: 330px;
+    object-fit: cover;
+    object-position: 0 0;
+}
+
+.text-section{
+    width: 600px;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    height: 365px;
+    border-bottom: solid 2px #a9a9a9;
+}
+
+.wrapper{
+    height: 290px;
+    overflow-y: scroll;
+}
+
+.reviews{
+ border-bottom: solid 2px #a9a9a9;
+}

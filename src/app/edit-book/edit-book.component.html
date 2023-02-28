@@ -1,41 +1,41 @@
-<!-- <div class="container">
-    <div class="add-book-items">
-        
-    <div class="add-book-items">
-        
-    </div>
-</div> -->
-
 <section class="add-book">
     <h2>Add Book</h2>
     <div class="add-book-item">
         <div class="container">
             <div class="input-item">
                 <h3>Title</h3>
-                <input matInput type="text" class="text-input">
+                <input #titleInput matInput type="text" class="text-input">
             </div>
             <div class="input-item">
                 <h3>Cover</h3>
-                <input matInput type="text" class="text-input">
+                <label for="file-input" class="file-input-button">
+                    Choose File
+                </label>
+                <input #coverInput id="file-input" type="file" accept=".jpg" >
             </div>
             <div class="input-item">
                 <h3>Genre</h3>
-                <input matInput type="text" class="text-input">
+                <input #genreInput matInput type="text" class="text-input">
             </div>
             <div class="input-item">
                 <h3>Author</h3>
-                <input matInput type="text" class="text-input">
+                <input #authorInput matInput type="text" class="text-input">
             </div>
         </div>
         <div class="container">
             <div id="content-input-item" class="input-item">
-                <h3>Content</h3>
-                <input matInput id="content-input" type="text" class="text-input">
+                <div class="wrapper">
+                    <h3>Content</h3>
+                </div>
+                <div class="wrapper">
+                    <textarea #contentInput id="content-input" cols="30" rows="10"></textarea>
+                </div>
+                <!-- <input  matInput id="" type="text" class="text-input"> -->
             </div>
         </div>
     </div>
     <div class="buttons">
-        <button mat-raised-button color="primary">Add</button>
-        <button mat-raised-button color="accent">Clear</button>
+        <button mat-raised-button color="primary" (click)="onClickAdd()">Add</button>
+        <button mat-raised-button color="accent" (click)="onClickClear()">Clear</button>
     </div>
 </section>
