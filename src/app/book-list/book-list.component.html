@@ -1,0 +1,38 @@
+<section class="book-list">
+    <mat-tab-group class="tabs">
+        <mat-tab label="All" class="tab">
+            <div class="books">
+                <div class="wrapper">
+                    <div class="book-item" *ngFor="let book of books">
+                        <app-book-list-item [book] = "book"></app-book-list-item>
+                    </div>
+                </div>
+            </div> 
+        </mat-tab>
+        <mat-tab label="Recommended" class="tab">
+            <div class="book-tab">
+                <div class="wrapper">
+                    <div class="book-item" *ngFor="let book of books">
+                        <app-book-list-item [book] = "book"></app-book-list-item>
+                    </div>
+                </div>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+
+    <!-- <div class="tab">
+        <button >All</button>
+        <button >Recommended</button>
+    </div>
+    <div #All class="tabcontent">
+        <h2>Book List</h2>
+        
+    </div>
+    <div #Recommended class="tabcontent">
+        <h2>Book List</h2>
+        <div class="book-item" *ngFor="let book of books">
+            <h3>{{ book.title }}</h3>
+        </div>
+    </div>
+     -->
+</section>

@@ -1,0 +1,29 @@
+.book-list{
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 5px;
+    height: 300px;
+}
+
+.tab{
+    /* height: 300px;
+    width: 100%; */
+    overflow: scroll;
+}
+
+.tabs{
+    height: 300px;
+    width: 100%;
+}
+
+
+.wrapper{
+    column-count: 2;
+    column-gap: 10px;
+}
+
+.book-item{
+    display: grid;
+    place-content: center;
+    margin-bottom: 5px;
+} 
